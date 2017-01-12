@@ -27,21 +27,28 @@ public class pickUpScript : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.E))
         {
+            Debug.Log("E geklikt");
             if (Physics.Raycast(pickUp, out hit, 20f))
             {
+                Debug.Log("ray");
                 if (hit.collider.gameObject.CompareTag("PictureOne"))
                 {
+                    Debug.Log("pic1");
                     hit.collider.gameObject.SetActive(false);
                     GetComponent<AudioSource>().PlayOneShot(paperCrumble, 1f);
                     picturePieces = picturePieces + 1;
                 }
                 if (hit.collider.gameObject.CompareTag("PictureTwo"))
                 {
+                    Debug.Log("pic2");
+                    GetComponent<AudioSource>().PlayOneShot(paperCrumble, 1f);
                     hit.collider.gameObject.SetActive(false);
                     picturePieces = picturePieces + 1;
                 }
                 if (hit.collider.gameObject.CompareTag("PictureThree"))
                 {
+                    Debug.Log("pic3");
+                    GetComponent<AudioSource>().PlayOneShot(paperCrumble, 1f);
                     hit.collider.gameObject.SetActive(false);
                     picturePieces = picturePieces + 1;
                 }
